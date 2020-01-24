@@ -7,6 +7,7 @@ public interface SuperhumanService {
 
 	public boolean createASuperhuman(Superhuman sh);
 	public boolean deleteASuperhuman(Superhuman sh);
+	public boolean updateASuperhuman(String superName, Superhuman sh);
 	
 	public List<Superhuman> getAllSuperhumans();
 	public String getAllJoinAlignmentString();

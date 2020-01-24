@@ -13,7 +13,7 @@ import com.revature.superhuman.pojo.Superhuman;
 import com.revature.superhuman.service.SuperhumanService;
 import com.revature.superhuman.service.SuperhumanServiceImpl;
 
-public class SuperhumanAddServlet extends HttpServlet {
+public class SuperhumanUpdateServlet extends HttpServlet {
 
 	SuperhumanService superService = new SuperhumanServiceImpl();
 	
@@ -32,9 +32,8 @@ public class SuperhumanAddServlet extends HttpServlet {
 			return;
 		}
 		
-		superService.createASuperhuman(sh);
-
+		superService.updateASuperhuman(req.getParameter("suptoupdate"), sh);
+		
 		resp.sendRedirect("SuperhumanMain.html");
-
 	}
 }

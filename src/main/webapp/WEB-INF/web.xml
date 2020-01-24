@@ -40,4 +40,14 @@
   	<url-pattern>/delete-super-human</url-pattern>
   </servlet-mapping>
   
+    <!-- Create a Superhuman -->
+  <servlet>
+  	<servlet-name>SuperhumanUpdateServlet</servlet-name>
+  	<servlet-class>com.revature.superhuman.servlet.SuperhumanUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SuperhumanUpdateServlet</servlet-name>
+  	<url-pattern>/update-super-human</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

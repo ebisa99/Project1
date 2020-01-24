@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Superhuman</title>
+</head>
+<body>
+
+<form action="/Project1/super-human" target="_blank" method="GET">
+	<input type="Submit" value="Load Superhuman DB in New Tab">
+</form>
+
+</br>
+
+<form action="/Project1/create-super-human" target="_self" method="POST">
+	<input type="text" name="supname" placeholder="Superhuman Name">
+	<input type="text" name="alias" placeholder="Alias">
+	<input type="text" name="home" placeholder="Hometown">
+	<input type="text" name="power" placeholder="Main Power">
+	<select name="align">
+		<option value="1">Hero</option>
+		<option value='2'>Villain</option>
+		<option value="3">Vigilante</option>
+	</select>
+	</br>
+	<input type="Submit" value="Create Superhuman">
+</form>
+
+</br>
+
+<form action="/Project1/delete-super-human" target="_self" method="POST">
+	<input type="text" name="supname" placeholder="Superhuman to Delete">
+	</br>
+	<input type="Submit" value="Delete Superhuman">
+</form>
+
+</br>
+
+<form action="/Project1/update-super-human" target="_self" method="POST">
+	<input type="text" name="suptoupdate" placeHolder="Superhuman to Update">
+	</br>
+	<input type="text" name="supname" placeholder="Superhuman Name">
+	<input type="text" name="alias" placeholder="Alias">
+	<input type="text" name="home" placeholder="Hometown">
+	<input type="text" name="power" placeholder="Main Power">
+	<select name="align">
+		<option value="1">Hero</option>
+		<option value='2'>Villain</option>
+		<option value="3">Vigilante</option>
+	</select>
+	</br>
+	<input type="Submit" value="Update Superhuman">
+</form>
+
+</body>
+</html>

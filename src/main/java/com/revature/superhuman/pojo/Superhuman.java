@@ -54,7 +54,7 @@ public class Superhuman {
 	
 	@Override
 	public String toString() {
-		return "Superhuman: Super Name - " + superName + ", Alias - " + alias + ", Hometown - " + hometown + ", Main Power - "
+		return "Super Name: " + superName + ", Alias: " + alias + ", Hometown: " + hometown + ", Main Power: "
 				+ mainPower;
 	}
 	
