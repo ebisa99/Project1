@@ -19,11 +19,14 @@ public class SuperhumanDeleteServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//Create a new superhuman with just a name
 		Superhuman sh = new Superhuman();
-		
 		sh.setSuperName(req.getParameter("supname"));
+		
+		//send the superhuman to be deleted by the name
 		superService.deleteASuperhuman(sh);
 		
+		//redirect the user back to the original page
 		resp.sendRedirect("SuperhumanMain.html");
 	}
 }

@@ -19,6 +19,8 @@ public class SuperhumanGetAllServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		PrintWriter pw = resp.getWriter();
+		
+		//write the joined table of superhuman and alignment to the screen
 		pw.write(superService.getAllJoinAlignmentString());
 	}
 }

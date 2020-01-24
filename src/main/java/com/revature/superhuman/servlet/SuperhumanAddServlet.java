@@ -19,6 +19,7 @@ public class SuperhumanAddServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//Create a new superhuman with information from post
 		Superhuman sh = new Superhuman();
 		
 		sh.setSuperName(req.getParameter("supname"));
@@ -32,9 +33,10 @@ public class SuperhumanAddServlet extends HttpServlet {
 			return;
 		}
 		
+		//Call service to attempt to a the superhuman to the superhuman DB
 		superService.createASuperhuman(sh);
-
+		
+		//Redirect the user to the original page
 		resp.sendRedirect("SuperhumanMain.html");
-
 	}
 }

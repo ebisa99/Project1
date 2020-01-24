@@ -1,21 +1,16 @@
 package com.revature.superhuman.service;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
-import com.revature.superhuman.dao.AlignmentDAO;
-import com.revature.superhuman.dao.AlignmentDAOPostgres;
 import com.revature.superhuman.dao.SuperhumanDAO;
 import com.revature.superhuman.dao.SuperhumanDAOPostgres;
-import com.revature.superhuman.pojo.Alignment;
 import com.revature.superhuman.pojo.Superhuman;
 import com.revature.superhuman.util.DBTablePrinter;
 
 public class SuperhumanServiceImpl implements SuperhumanService {
 
 	SuperhumanDAO sdp = new SuperhumanDAOPostgres();
-	AlignmentDAO adp = new AlignmentDAOPostgres();
 	
 	@Override
 	public List<Superhuman> getAllSuperhumans() {		
@@ -40,26 +35,25 @@ public class SuperhumanServiceImpl implements SuperhumanService {
 
 	@Override
 	public String getAllJoinAlignmentString() {
-//		List<Superhuman> sups = sdp.getAll();
-//		List<Alignment> alig = adp.getAll();
-
 		ResultSet rs = sdp.getJoinedAlignment();
 		
+		//Get a string containing the entire result set as a string
 		String tempString = DBTablePrinter.printResultSet(rs);
 		
+		//rename the returning result set column titles
 		tempString = tempString.replace("super_name", "Super Name");
-		tempString = tempString.replace("alias", "Alias");
+		tempString = tempString.replace("alias", " Name");
 		tempString = tempString.replace("hometown", "Hometown");
 		tempString = tempString.replace("main_power", "Main Power");
 		tempString = tempString.replace("align_type", " Alignment");		
 		
-		return tempString;
-		
-//		for(Superhuman sh: sups) {
-//			joinedList += (sh.toString() + ", Alignement: " + alig.get(alignIndex).getAlignment() + "\n");
-//		}
-//		
-//		return joinedList;		
+		return tempString;	
 	}
+
+	public void setSdp(SuperhumanDAO sdp) {
+		this.sdp = sdp;
+	}
+	
+	
 
 }
