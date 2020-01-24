@@ -5,6 +5,9 @@ import com.revature.superhuman.pojo.Superhuman;
 
 public interface SuperhumanService {
 
+	public boolean createASuperhuman(Superhuman sh);
+	public boolean deleteASuperhuman(Superhuman sh);
+	
 	public List<Superhuman> getAllSuperhumans();
-	public boolean createASuperhuman(String name, String alias, String home, String power, int alignId);
+	public String getAllJoinAlignmentString();
 }

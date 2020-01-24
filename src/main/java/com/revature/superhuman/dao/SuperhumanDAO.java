@@ -6,8 +6,8 @@ import com.revature.superhuman.pojo.Superhuman;
 
 public interface SuperhumanDAO {
 
-	public void add();
-	public void delete();
+	public boolean add(Superhuman sh);
+	public boolean delete(Superhuman sh);
 	
 	public List<Superhuman> getAll();
 }

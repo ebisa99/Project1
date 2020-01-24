@@ -6,9 +6,9 @@ public class Superhuman {
 	private String alias;
 	private String hometown;
 	private String mainPower;
-	private String alignment;
+	private Integer alignment;
 	
-	public Superhuman(String superName, String alias, String hometown, String mainPower, String alignment) {
+	public Superhuman(String superName, String alias, String hometown, String mainPower, Integer alignment) {
 		super();
 		this.superName = superName;
 		this.alias = alias;
@@ -45,12 +45,20 @@ public class Superhuman {
 	public void setMainPower(String mainPower) {
 		this.mainPower = mainPower;
 	}
+	public Integer getAlignment() {
+		return alignment;
+	}
+	public void setAlignment(Integer alignment) {
+		this.alignment = alignment;
+	}
 	
 	@Override
 	public String toString() {
-		return "Superhuman [superName=" + superName + ", alias=" + alias + ", hometown=" + hometown + ", mainPower="
-				+ mainPower + ", alignment=" + alignment + "]";
+		return "Superhuman: Super Name - " + superName + ", Alias - " + alias + ", Hometown - " + hometown + ", Main Power - "
+				+ mainPower;
 	}
+	
+	
 	
 	
 }

@@ -9,15 +9,35 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
+
   <!-- Get all Superhumans -->
   <servlet>
-  	<servlet-name>SuperhumanServlet</servlet-name>
-  	<servlet-class>com.revature.superhuman.servlet.SuperhumanServlet</servlet-class>
+  	<servlet-name>SuperhumanGetAllServlet</servlet-name>
+  	<servlet-class>com.revature.superhuman.servlet.SuperhumanGetAllServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>SuperhumanServlet</servlet-name>
+  	<servlet-name>SuperhumanGetAllServlet</servlet-name>
   	<url-pattern>/super-human</url-pattern>
+  </servlet-mapping>
+  
+    <!-- Create a Superhuman -->
+  <servlet>
+  	<servlet-name>SuperhumanAddServlet</servlet-name>
+  	<servlet-class>com.revature.superhuman.servlet.SuperhumanAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SuperhumanAddServlet</servlet-name>
+  	<url-pattern>/create-super-human</url-pattern>
+  </servlet-mapping>
+  
+      <!-- Create a Superhuman -->
+  <servlet>
+  	<servlet-name>SuperhumanDeleteServlet</servlet-name>
+  	<servlet-class>com.revature.superhuman.servlet.SuperhumanDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SuperhumanDeleteServlet</servlet-name>
+  	<url-pattern>/delete-super-human</url-pattern>
   </servlet-mapping>
   
 </web-app>

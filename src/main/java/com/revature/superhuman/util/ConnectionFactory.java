@@ -15,21 +15,14 @@ public class ConnectionFactory {
 	private static String password;
 	
 	private static ConnectionFactory cf;
-	
-	private static final String PROPERTIES_FILE = "src/main/resources/database.properties";
-	
+
 	private ConnectionFactory () {
-		Properties prop = new Properties();
-		
-		try (FileInputStream fis = new FileInputStream(PROPERTIES_FILE)) {
-			prop.load(fis);
-			url = prop.getProperty("url");
-			username = prop.getProperty("username");
-			password = prop.getProperty("password");
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
+		url = "jdbc:postgresql://" + System.getenv("Postgresql_url") + ":5432/project1?currentSchema=superhumans";
+		username = System.getenv("prostresql_username");
+		password = System.getenv("postgresql_password");
+		try {
+			Class.forName("org.postgresql.Driver");
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
