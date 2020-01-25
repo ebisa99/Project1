@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+
+#container {
+	padding: 10px;
+}
+
+#border { 
+	border: 10px solid;
+	padding: 0px;
+	height: 40%;
+	width: 40%;
+}
+
+#miniBorder {
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	padding: 5px;
+	border: solid;
+}
+
+#button {
+	border: solid 3px;
+	margin-top: 10px;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	background-color: lightblue;
+	font-weight: bold;
+	font-size: 18px;
+	text-shadow: gray 1px 1px;
+}
+
+#formborder {
+	border: solid 3px;
+	padding: 5px;
+	width: 60%;
+	margin-left: 19.5%;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	background-color: #76bdd5;
+}
+
+body {
+	text-align: center;
+	background-color: gray;
+}
+
+h1 {
+	text-shadow: black 1px 1px;
+}
+
+h2 {
+	text-shadow: gray 1px 1px;
+}

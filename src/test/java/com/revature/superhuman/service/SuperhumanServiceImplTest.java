@@ -1,4 +1,4 @@
-package com.revature.superhuman.dao;
+package com.revature.superhuman.service;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import com.revature.superhuman.dao.SuperhumanDAO;
 import com.revature.superhuman.pojo.Superhuman;
 import com.revature.superhuman.service.SuperhumanServiceImpl;
 

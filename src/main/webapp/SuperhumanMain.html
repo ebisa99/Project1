@@ -3,54 +3,65 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Superhuman</title>
+<link rel="stylesheet" type="text/css" href="styles/shmain.css"/>
 </head>
 <body>
 
+<div id="container">
+	<h1 id="centered">Your Superhuman Network</h1>
+	<img id="border" src="https://images.hdqwalls.com/download/superheroes-minimalism-4k-image-1366x768.jpg">
+</div>
+
 <form action="/Project1/super-human" target="_blank" method="GET">
-	<input type="Submit" value="Load Superhuman DB in New Tab">
+	<input id="button" type="Submit" value="Load You Superhuman Network in New Tab">
 </form>
 
-</br>
+<div id="formborder">
+	<h2>Add A Superhuman To Your Network</h2>
+	<form action="/Project1/create-super-human" target="_self" method="POST">
+		<input id="miniBorder" type="text" name="supname" placeholder="Superhuman Name">
+		<input id="miniBorder" type="text" name="alias" placeholder="Alias">
+		<input id="miniBorder" type="text" name="home" placeholder="Hometown">
+		<input id="miniBorder" type="text" name="power" placeholder="Main Power">
+		<select id="miniBorder" name="align">
+			<option value="1">Hero</option>
+			<option value='2'>Villain</option>
+			<option value="3">Vigilante</option>
+		</select>
+		</br>
+		<input id="button" type="Submit" value="Create Superhuman">
+	</form>
+</div>
 
-<form action="/Project1/create-super-human" target="_self" method="POST">
-	<input type="text" name="supname" placeholder="Superhuman Name">
-	<input type="text" name="alias" placeholder="Alias">
-	<input type="text" name="home" placeholder="Hometown">
-	<input type="text" name="power" placeholder="Main Power">
-	<select name="align">
-		<option value="1">Hero</option>
-		<option value='2'>Villain</option>
-		<option value="3">Vigilante</option>
-	</select>
-	</br>
-	<input type="Submit" value="Create Superhuman">
-</form>
+<div id="formborder">
+	<h2>Remove A Superhuman From Your Network</h2>
+	<form action="/Project1/delete-super-human" target="_self" method="POST">
+		<input id="miniBorder" type="text" name="supname" placeholder="Superhuman to Delete">
+		</br>
+		<input id="button" type="Submit" value="Delete Superhuman">
+	</form>
+</div>
 
-</br>
+<div id="formborder">
+	<h2>Update A Superhuman On Your Network</h2>
+	<form action="/Project1/update-super-human" target="_self" method="POST">
+		<input id="miniBorder" type="text" name="suptoupdate" placeHolder="Superhuman to Update">
+		</br>
+		<input id="miniBorder" type="text" name="supname" placeholder="Superhuman Name">
+		<input id="miniBorder" type="text" name="alias" placeholder="Alias">
+		<input id="miniBorder" type="text" name="home" placeholder="Hometown">
+		<input id="miniBorder" type="text" name="power" placeholder="Main Power">
+		<select id="miniBorder" name="align">
+			<option value="1">Hero</option>
+			<option value='2'>Villain</option>
+			<option value="3">Vigilante</option>
+		</select>
+		</br>
+		<input id="button" type="Submit" value="Update Superhuman">
+	</form>
+</div>
 
-<form action="/Project1/delete-super-human" target="_self" method="POST">
-	<input type="text" name="supname" placeholder="Superhuman to Delete">
-	</br>
-	<input type="Submit" value="Delete Superhuman">
-</form>
-
-</br>
-
-<form action="/Project1/update-super-human" target="_self" method="POST">
-	<input type="text" name="suptoupdate" placeHolder="Superhuman to Update">
-	</br>
-	<input type="text" name="supname" placeholder="Superhuman Name">
-	<input type="text" name="alias" placeholder="Alias">
-	<input type="text" name="home" placeholder="Hometown">
-	<input type="text" name="power" placeholder="Main Power">
-	<select name="align">
-		<option value="1">Hero</option>
-		<option value='2'>Villain</option>
-		<option value="3">Vigilante</option>
-	</select>
-	</br>
-	<input type="Submit" value="Update Superhuman">
-</form>
+<br/>
 
 </body>
 </html>
